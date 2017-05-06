@@ -226,6 +226,7 @@ wget -O usernew "https://raw.githubusercontent.com/adammau2/script-vps/master/cr
 wget -O renew "https://raw.githubusercontent.com/adammau2/script-vps/master/user-renew.sh"
 wget -O userlist "https://raw.githubusercontent.com/adammau2/script-vps/master/user-list.sh" 
 wget -O trial "https://raw.githubusercontent.com/adammau2/script-vps/master/user-trial.sh"
+wget -O tendang "https://raw.githubusercontent.com/adammau2/script-vps/master/tendang.sh"
 echo "cat log-install.txt" | tee info
 echo "python /usr/bin/speedtest.py --share" | tee speedtest
 wget -O speedtest "https://raw.githubusercontent.com/adammau2/script-vps/master/speedtest_cli.py"
@@ -243,6 +244,7 @@ chmod +x speedtest
 chmod +x speedtest_cli.py
 chmod +x bench
 chmod +x mem
+chmod +x tendang
 
 # cron
 cd
@@ -251,6 +253,8 @@ chkconfig crond on
 service crond stop
 echo "0 */12 * * * root /usr/bin/userexpire" > /etc/cron.d/user-expire
 echo "0 0 * * * root /usr/bin/reboot" > /etc/cron.d/reboot
+echo "* * * * * root /usr/bin/tendang" > /etc/dron.d/tendang
+
 
 # set time GMT +7
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
@@ -279,7 +283,7 @@ echo "--------------------------------------"  | tee -a log-install.txt
 echo "OpenVPN : TCP 1194 (client config : http://$MYIP:81/1194-client.ovpn)"  | tee -a log-install.txt
 echo "Port OpenSSH : 22, 143"  | tee -a log-install.txt
 echo "Port Dropbear : 109, 110, 443"  | tee -a log-install.txt
-echo "SquidProxy    : 80, 8080 (limit to IP SSH)"  | tee -a log-install.txt
+echo "SquidProxy    : 80, 8080, 3128 (limit to IP SSH)"  | tee -a log-install.txt
 echo "badvpn   : badvpn-udpgw port 7300"  | tee -a log-install.txt
 echo "Webmin   : http://$MYIP:10000/"  | tee -a log-install.txt
 echo "vnstat   : http://$MYIP:81/vnstat/"  | tee -a log-install.txt
