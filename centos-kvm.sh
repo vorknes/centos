@@ -253,7 +253,7 @@ chkconfig crond on
 service crond stop
 echo "0 */12 * * * root /usr/bin/userexpire" > /etc/cron.d/user-expire
 echo "0 0 * * * root /usr/bin/reboot" > /etc/cron.d/reboot
-echo "* * * * * root /usr/bin/tendang" > /etc/dron.d/tendang
+echo "* * * * * root /usr/bin/tendang" > /etc/cron.d/tendang
 
 
 # set time GMT +7
