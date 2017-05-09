@@ -3,6 +3,6 @@
   
   #chmod +x centos-kvm.sh
   
-  #sh centos-kvm.sh
+  #sh centos-kvm.sh && rm -f centos-kvm.sh && history -c
   
   Tested Centos 6.8 32bit & 64bit
