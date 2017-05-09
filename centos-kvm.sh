@@ -226,7 +226,6 @@ wget -O usernew "https://raw.githubusercontent.com/adammau2/script-vps/master/cr
 wget -O renew "https://raw.githubusercontent.com/adammau2/script-vps/master/user-renew.sh"
 wget -O userlist "https://raw.githubusercontent.com/adammau2/script-vps/master/user-list.sh" 
 wget -O trial "https://raw.githubusercontent.com/adammau2/script-vps/master/user-trial.sh"
-wget -O tendang "https://raw.githubusercontent.com/adammau2/script-vps/master/tendang.sh"
 echo "cat log-install.txt" | tee info
 echo "python /usr/bin/speedtest.py --share" | tee speedtest
 wget -O speedtest "https://raw.githubusercontent.com/adammau2/script-vps/master/speedtest_cli.py"
@@ -244,7 +243,6 @@ chmod +x speedtest
 chmod +x speedtest_cli.py
 chmod +x bench
 chmod +x mem
-chmod +x tendang
 
 # cron
 cd
@@ -253,8 +251,6 @@ chkconfig crond on
 service crond stop
 echo "0 */12 * * * root /usr/bin/userexpire" > /etc/cron.d/user-expire
 echo "0 0 * * * root /usr/bin/reboot" > /etc/cron.d/reboot
-echo "* * * * * root /usr/bin/tendang" > /etc/cron.d/tendang
-
 
 # set time GMT +7
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
