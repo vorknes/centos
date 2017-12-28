@@ -14,7 +14,7 @@ exp="$(chage -l $kerdunet | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$Pass\n$Pass\n"|passwd $kerdunet &> /dev/null
 echo -e ""
 echo -e "----------------------------"
-echo -e "Data Login:
+echo -e "Data Login:"
 echo -e "----------------------------"
 echo -e "Host: $IP"
 echo -e "Port: 22, 143, 443, 109, 110"
