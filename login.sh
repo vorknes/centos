@@ -1,5 +1,9 @@
 #!/bin/bash
 
+clear 
+echo ""
+echo "-----------MENGECEK USERlOGIN BY KERDUNET.TOP-----------"
+echo ""
 data=( `ps aux | grep -i dropbear | awk '{print $2}'`);
 echo "-----------------------------------------";
 echo "------------ Dropbear Login -------------";
