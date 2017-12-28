@@ -1,5 +1,6 @@
 #!/bin/bash
 #082210988552
+clear
 echo ""
 echo "-----------------MEMBUAT AKUN BY KERDUNET.TOP------------------"
 echo ""
