@@ -1,6 +1,8 @@
 #!/bin/bash
 #del user by aditya [082210988552]
-
+echo ""
+echo "--------------MENGHAPUS USER BY KERDUNET.TOP---------------"
+echo ""
 read -p "Isikan username yg akan dihapus: " username
 
 egrep "^$username" /etc/passwd >/dev/null
