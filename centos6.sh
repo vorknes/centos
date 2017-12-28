@@ -227,7 +227,7 @@ wget -O usernew "https://raw.githubusercontent.com/kerdunet/centos/master/create
 wget -O renew "https://raw.githubusercontent.com/kerdunet/centos/master/user-renew.sh"
 wget -O userlist "https://raw.githubusercontent.com/kerdunet/centos/master/user-list.sh" 
 wget -O trial "https://raw.githubusercontent.com/kerdunet/centos/master/user-trial.sh"
-wget -O userdel "https://raw.githubusercontent.com/kerdunet/centos/master/userdel.sh"
+wget -O hapus "https://raw.githubusercontent.com/kerdunet/centos/master/user-del.sh"
 echo "cat log-install.txt" | tee info
 echo "python /usr/bin/speedtest.py --share" | tee speedtest
 wget -O speedtest "https://raw.githubusercontent.com/kerdunet/centos/master/speedtest_cli.py"
@@ -245,7 +245,7 @@ chmod +x speedtest
 chmod +x speedtest_cli.py
 chmod +x bench
 chmod +x mem
-chmod +x userdel
+chmod +x hapus
 
 # cron
 cd
@@ -314,7 +314,7 @@ echo "trial : untuk membuat akun trial selama 1 hari"  | tee -a log-install.txt
 echo "usernew : untuk membuat akun baru"  | tee -a log-install.txt
 echo "renew : untuk memperpanjang masa aktif akun"  | tee -a log-install.txt
 echo "userlist : untuk melihat daftar akun beserta masa aktifnya"  | tee -a log-install.txt
-echo "userdel : untuk menghapus akun"  | tee -a log-install.txt
+echo "hapus : untuk menghapus akun"  | tee -a log-install.txt
 echo "----------"  | tee -a log-install.txt
 
 
