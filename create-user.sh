@@ -1,6 +1,8 @@
 #!/bin/bash
 #082210988552
-
+echo ""
+echo "-----------------MEMBUAT AKUN BY KERDUNET.TOP------------------"
+echo ""
 read -p "Username : " kerdunet
 read -p "Password : " Pass
 read -p "Expired (hari): " masaaktif
