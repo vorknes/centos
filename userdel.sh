@@ -1,5 +1,6 @@
 #!/bin/bash
 #del user by aditya [082210988552]
+clear
 echo ""
 echo "--------------MENGHAPUS USER BY KERDUNET.TOP---------------"
 echo ""
